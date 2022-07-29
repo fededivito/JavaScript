@@ -1,10 +1,17 @@
-var parcial,final,promedio;
-	parcial = parseFloat(prompt("Parcial"));
-	final = parseFloat(prompt("Final"));
-	promedio = (parcial+final)/2;
 
-	if(promedio >= 10.5){
-		console.log("El promedio es "+promedio+" APROBADO");
-	}else{
-		console.log("El promedio es "+promedio+" DESAPROBADO");
-	}
+let less = document.querySelector(".less")
+let more = document.querySelector(".more")
+let resultado = document.querySelector(".resultado")
+let contador = 0
+
+more.onclick = (e) => {
+    //contador = contador + 1
+    contador += 1
+    resultado.innerText = contador
+}
+
+less.addEventListener('click', function(e){
+    //contador = contador + 1
+    contador -= 1
+    resultado.innerText = contador
+})
