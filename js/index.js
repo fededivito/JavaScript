@@ -15,3 +15,5 @@ less.addEventListener('click', function(e){
     contador -= 1
     resultado.innerText = contador
 })
+
+
