@@ -18,69 +18,103 @@
 }
 /* Fin Header */
 
-/* Productos*/
-
-.h1 {
-    font-size: 50px;
-    padding-left: 100px;
-    padding-top: 100px;
-}
-
-section div {
-    text-align: center;
-}
-.products {
-    margin-bottom: 500px;
+/*  */
+.main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+    width: 85%;
+    margin: 0px auto 20px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
-    height: 200px
-} 
+    border: 1px solid  rgb(136, 136, 136, 0.4);
+    box-shadow: 3px 5px rgb(136, 136, 136, 0.3);
+    border-radius: 10px;
+    padding: 5% 10%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.product .imagen{
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+.descripcion{
+    text-align: center;
+    width: 100%;
+}
+.descripcion h3{
+    font-size: 1rem;
+}
+.boton{
+    border: 1px solid rgb(57, 57, 57, 0.5);
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: .8rem;
+}
+.boton:hover{
+    background-color: rgb(96, 157, 136, 0.5);
+}
+/*  */
 
-.products img:hover {
-    transform: scale(1.2);
-    transition: all 2s;
+/* POPUP */
+.popupDetalle{
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(128, 128, 128, 0.4);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.popupDetalle>div{
+    background-image: url('https://marketplace.canva.com/EAFGKWZ7S3c/1/0/1600w/canva-fondo-de-pantalla-caritas-felices-aesthetic-gradiente-morado-y-rosa-yuWW9A_crYQ.jpg');
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.product-detail .imagen{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
 }
 
-.funda-a, .funda-p, .cubre-v {
-    margin: 20px 20px 20px 20px;
-    width: 200px;
-    height: 200px; }
-  
-  .mascara-p, .cubre-a, .cubre-m {
-    margin: 20px 20px 20px 20px;
-    width: 300px;
-    height: 200px; }
-
-.mascara-p {
-    border: solid 1px black;}
-
-.funda-p {
-    border: solid 1px black;}
-
-.funda-a {
-    border: solid 1px black;}
-
-.cubre-a {
-    border: solid 1px black;
+.closePopup{
+    text-align: end;
+    width: 100%;
 }
-
-.cubre-m {
-    border: solid 1px black;
+.product-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
-.cubre-v {
-    border: solid 1px black;
+.descripcion-detail .click{
+    margin: 10px 0
 }
-
-.p3 {
-    margin-left: 150px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 30px;
+.descripcion-detail .click .resultado{
+    margin: 0 10px
 }
-/* Fin productos */
+.descripcion-detail .click .less, .descripcion-detail .click .more{
+    border: 2px solid rgb(122, 152, 162);
+    background-color: lightblue;
+    border-radius: 50%;
+    padding: 3px 7px;
+}
+.d-none{
+    display: none;
+    }
 /* Footer */
 .photo-grid-container {
     display: grid;
